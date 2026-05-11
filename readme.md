@@ -1,33 +1,25 @@
-# Currículo
+# Curriculo LaTeX
 
-Este repositório contém o meu currículo, desenvolvido em LaTeX, com informações sobre minha formação acadêmica, experiência profissional, habilidades técnicas e projetos. O currículo está estruturado de forma a fornecer uma visão clara e objetiva sobre minhas qualificações e experiências.
+Projeto de currículo modularizado em LaTeX.
 
-## Estrutura do Currículo
+## Estrutura
 
-- **Objetivo**: Descrição do cargo desejado e área de atuação.
-- **Resumo Profissional**: Experiência e habilidades na área de desenvolvimento de software.
-- **Formação Acadêmica**: Educação formal e cursos relevantes.
-- **Experiência Profissional**: Detalhes sobre posições anteriores e projetos realizados.
-- **Habilidades Técnicas**: Tecnologias e ferramentas dominadas.
-- **Idiomas**: Nível de fluência em diferentes idiomas.
-- **Certificações**: Cursos e treinamentos concluídos.
-- **Projetos Pessoais**: Exemplos de projetos desenvolvidos por conta própria.
+- `main.tex`: Entry point.
+- `lib/`: Classes customizadas (`resume.cls`).
+- `data/`: Conteúdo estruturado por seções.
 
-## Tecnologias e Ferramentas
+## Uso
 
-- **LaTeX**: Para formatação e estruturação do currículo.
-- **GitHub**: Para versionamento do código e compartilhamento de projetos pessoais.
+Para adicionar novas entradas, utilize a macro `\resumeEntry`:
 
-## Como Usar
+```latex
+\resumeEntry{Titulo}{Subtitulo}{Data}{Conteudo}
+```
 
-Para gerar o currículo em PDF a partir do arquivo `.tex`, siga os passos abaixo:
+## Build
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/Isllanrx/curriculo-latex.git
-   ```
-2. Se estiver usando uma distribuição LaTeX local:
+Utilize o Makefile para gerar o artefato PDF:
 
-   ```bash
-   pdflatex curriculo.tex
-   ```
+```bash
+make
+```

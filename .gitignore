@@ -1,0 +1,17 @@
+# Build artifacts
+*.aux
+*.log
+*.out
+*.pdf
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environments
+.vscode/
+.idea/
